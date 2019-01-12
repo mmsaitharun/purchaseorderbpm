@@ -1,0 +1,75 @@
+{
+    "id": "poapprover",
+    "name": "PoApprover",
+    "revision": "dev",
+    "readOnly": false,
+    "content": [
+        {
+            "id": "po_details",
+            "type": "section",
+            "title": "PO Details",
+            "content": [
+                {
+                    "id": "po_number",
+                    "type": "string",
+                    "label": "PO Number",
+                    "readOnly": true,
+                    "value": "${context.requestId}",
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "vendor_number",
+                    "type": "string",
+                    "label": "Vendor Number",
+                    "readOnly": true,
+                    "value": "${context.vendorNumber}",
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "po_value",
+                    "type": "string",
+                    "label": "PO Value",
+                    "readOnly": true,
+                    "value": "${context.poValue}",
+                    "constraints": {
+                        "required": false
+                    }
+                }
+            ]
+        },
+        {
+            "id": "comments",
+            "type": "section",
+            "title": "Comments",
+            "content": [
+                {
+                    "id": "approver_comments",
+                    "type": "string",
+                    "label": "Approver Comments",
+                    "placeholder": "Enter Comments",
+                    "readOnly": false,
+                    "value": "${context.approverComments}",
+                    "constraints": {
+                        "required": false
+                    }
+                }
+            ]
+        }
+    ],
+    "decisions": [
+        {
+            "id": "approve",
+            "text": "Approve",
+            "decisionType": "positive"
+        },
+        {
+            "id": "reject",
+            "text": "Reject",
+            "decisionType": "negative"
+        }
+    ]
+}
