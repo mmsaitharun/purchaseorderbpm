@@ -63,6 +63,22 @@
 				"key": "formRevision",
 				"value": "dev"
 			}],
+			"customAttributes": [{
+				"id": "poValue",
+				"label": "PO Value",
+				"type": "string",
+				"value": "${context.poValue}"
+			}, {
+				"id": "vendorNumber",
+				"label": "Vendor Number",
+				"type": "string",
+				"value": "${context.vendorNumber}"
+			}, {
+				"id": "requestId",
+				"label": "Request Id",
+				"type": "string",
+				"value": "${context.requestId}"
+			}],
 			"id": "usertask1",
 			"name": "PO Approver Task",
 			"dueDateRef": "3b74a77f-d1d4-48c5-9a60-872e80fa6608"
